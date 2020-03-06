@@ -14,6 +14,8 @@ library(wordcloud)
 library(wordcloud2)
 ```
 For this week's milestone, I decided to expand upon my past plots and dig into who is sending the messages and what they are saying. So, I first harvested the area codes out of the phone numbers column and scraped a website that contained a table that identified the state of each caller. My next steps here are to hopefully acquire information on student body demographics by state, so I can do per capita analysis here as well. Next, I also made a word cloud with the content from the messages, after making them into character strings. This highlights the most common words in the messages, after subtracting out stopwords ("a", "an", "the", etc.). My next goal is to learn how to do language processing and have a function determine whether or not messages are positive so it can sort through the messages.
+
+Repo is available <a href="https://github.com/sophiecwebster/milestone4">here</a>.
 ```{r}
 tntell <- read.csv("./textntell.csv", stringsAsFactors = FALSE) %>% select(Start, Tracker, Location, Mobile.Number, Comment)
 ```
